@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #0059ff;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+
+  .container {
+          padding: 16px;
+          max-width: max-content;
+    }
+
+    .container {
+          max-width: 1376px;
+          margin: auto;
+          padding: 2rem 1.5rem;
+    }
+
+    .cards {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .card {
+          cursor: pointer;
+          background-color: transparent;
+          height: 300px;
+          perspective: 1000px;
+          margin: 1rem;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .card h3 {
+          border-bottom: 1px #fff solid;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          text-align: center;
+          font-size: 1.6rem;
+          word-spacing: 3px;
+        }
+        
+        .card p{
+          opacity: 0.75;
+          font-size: 0.8rem;
+          line-height: 1.4;
+        }
+        
+        .card img {
+          width: 360px;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 3px;
+        }
+        
+        .card-inner {
+          position: relative;
+          width: 360px;
+          height: 100%;
+          transition: transform 0.9s;
+          transform-style: preserve-3d;
+        }
+        
+        .card:hover .card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        .card-front,
+        .card-back {
+          position: absolute;
+          width: 360px;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .card-back {
+          background-color: #222;
+          color: #fff;
+          padding: 1.5rem;
+          transform: rotateY(180deg);
+        }
+        .text-block {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          background-color: black;
+          color: white;
+          
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+
+    
+
+
+.features-section img {
+    display: none;
+  }
+  
+  .testimonials-section {
+    background: var(--primary-colour);
+    color: white;
+  }
+  
+  .testimonials-section li {
+    background: #0059ff;
+    text-align: center;
+    width: 80%;
+    border-radius: 1em;
+  }
+  
+  .testimonials-section li img {
+    width: 6em;
+    height: 6em;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    margin-top: -2.5em;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+ul.features-list {
+    margin: 0;
+    padding-left: .1em;
+  }
+  
+  ul.features-list li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    position: relative;
+  }
+  
+  ul.features-list li:before {
+    content: '';
+    left: -2em;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("#");
+    background-size: contain;
+    margin-right: .5em;
+  }
+  
+  .features-section img {
+    display: none;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </style>
+</head>
+<body>
+<div class="card text-center">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs">
+<li class="nav-item">
+<a class="nav-link active" aria-current="true" href="home.html" style="font-size:
+24px;">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="intro.html" style="font-size: 24px;">Introduction</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="upload.html" style="font-size: 24px;">Upload</a>
+</li>
+</ul>
+<h3 style="float: right;">AI based Natural Disaster Analysis</h3>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="container">
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1454789476662-53eb23ba5907?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=689&q=80"
+                            alt="">
+                        <div class="text-block">
+                            <h1>Cyclone</h1>
+                            <h3>violent winds, torrential rain, high waves and, very destructive storm</h3>
+                        </div>
+
+                    </div>
+                    <div class="card-back">
+                        <h3>Cyclone</h3>
+                        <h3>The effects of tropical cyclones include heavy rain, strong wind, large storm surges near
+                            landfall, and tornadoes. The destruction from a tropical cyclone, such as a hurricane or
+                            tropical storm, depends mainly on its intensity, its size, and its location.</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://images.unsplash.com/photo-1603869311144-66b03d340b32?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8ZWFydGhxdWFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                    alt="">
+                                <div class="text-block">
+                                    <h1>Earth Quake</h1>
+                                    <h3>Sudden release of stored energy in the Earth's crust that creates seismic waves.
+                                    </h3>
+                                </div>
+
+                            </div>
+                            <div class="card-back">
+                                <h3>Earth Quake</h3>
+                                <h3>Earthquakes are usually caused when rock underground suddenly breaks along a fault.
+                                    This sudden release of energy causes the seismic waves that make the ground shake.
+                                    ... During the earthquake and afterward, the plates or blocks of rock start moving,
+                                    and they continue to move until they get stuck again.</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container">
+
+                        <div class="cards">
+
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                            alt="">
+                                        <div class="text-block">
+                                            <h1>Flood</h1>
+                                            <h3>A flood is an overflow of water on normally dry ground</h3>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-back">
+                                        <h3>Flood</h3>
+                                        <h3>During heavy rain, the storm drains can become overwhelmed or plugged by
+                                            debris and flood the roads and buildings nearby. Low spots, such as
+                                            underpasses, underground parking garages, basements, and low water crossings
+                                            can become death traps. Areas near rivers are at risk from floods.</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="container">
+
+                                <div class="cards">
+
+                                    <div class="card">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <img src="https://images.unsplash.com/photo-1473260079709-83c808703435?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8d2lsZGZpcmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                                    alt="">
+                                                <div class="text-block">
+                                                    <h1>WildFire</h1>
+                                                    <h3>Uncontrolled fire in a forest, grassland, brushland</h3>
+                                                </div>
+
+                                            </div>
+                                            <div class="card-back">
+                                                <h3>Wildfire</h3>
+                                                <h3>Wildfires can be caused by an accumulation of dead matter (leaves,
+                                                    twigs, and trees) that can create enough heat in some instances to
+                                                    spontaneously combust and ignite the surrounding area. Lightning
+                                                    strikes the earth over 100,000 times a day. 10 to 20% of these
+                                                    lightning strikes can cause fire.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+</div>
