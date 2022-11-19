@@ -1,13 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 24 00:48:19 2020
-
-@author: Ranjith S
-"""
-
-
-# USAGE
-
 # import the necessary packages
 from flask import Flask, render_template, request, redirect, url_for
 # Flask-It is our framework which we are going to use to run/serve our application.
