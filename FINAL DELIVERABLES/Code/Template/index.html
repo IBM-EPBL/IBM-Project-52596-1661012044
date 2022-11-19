@@ -1,0 +1,83 @@
+<html>
+    <head>
+       
+        <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0">
+       <style>
+           *{
+            margin: 0;
+            padding: 0;
+           }
+           body{
+            width: 100vw;
+            height: 100vh;
+           }
+           .content{
+            display: flex;
+            flex-direction: column;
+            margin-top: 5rem;
+
+           }
+
+           .top{
+                height: 3rem;
+                background-color: rgb(12, 104, 161);
+                color: white;
+                display: flex;
+                letter-spacing: 2px;
+                align-items: center;
+                font-weight: 900;
+                font-size: 1.2rem;
+                font-family: monospace;
+                padding-left: 2.5rem;
+            }
+            .images{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            img{
+                
+                width:200px;
+                height:300px ;
+                border-radius: 1rem;
+                margin-left: 5rem;
+            }
+            button{
+                position: relative;
+                background-color: rgb(12, 104, 161);
+                color: white;
+                padding: 5px 10px;
+                border: 1px solid  rgb(12, 104, 161);
+                font-weight: 900;
+                font-size: 1.2rem;
+                font-family: monospace;
+                display: flex;
+                margin-left: 46%;
+                margin-top: 5rem;
+            }
+       </style>
+    </head>
+        <body>
+           
+
+                <div class="top">
+                    <div id="heading">AI Based Natural Disaster Analysis </div>
+                </div>
+                <div class="content">
+                <div class="images">
+                        <img src="../static/images/cyclones.jpg">
+                        <img src="../static/images/earthquake.jpg">
+                        <img src="../static/images/flood.jpg" >
+                        <img src="../static/images/wildfire.jpg">
+                </div>
+                <form action="/upload" method="get">
+                    <button type="submit">Open Web Camera</button>
+                </form>
+            </div>
+           
+            
+
+        
+        </body>
+</html>
